@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+p {
+  font-weight: 400;
+  margin: 20px 0 10px 0;
+  font-size: 18px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  padding: 100px;
+  margin-top: 50px;
+}
+
+.home {
+  flex-direction: row;
+  margin-top: 0;
+}
+.button {
+  cursor: pointer;
+  display: inline-block;
+  background: purple;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.button:hover {
+  transform: scale(0.96);
+}
+
+.logo,
+.logoservice {
+  position: absolute;
+  top: 30 px;
+  left: 100 px;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 20;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+.logoservice {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-weight: 1000;
+  font-size: 40px;
+}
+
+.toggle {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  right: 0;
+  background: purple;
+  z-index: 20;
+  background-image: url("../images/menu.png");
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: purple;
+  background-image: url("../images/close.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+
+.home-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 10;
+}
+
+.home-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 110%;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: gainsboro;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+.navigation ul li a {
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #111;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: purple;
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.7);
+}
+
+.navigation .email-icon {
+  position: absolute;
+  bottom: 175px;
+  transform: scale(0.7);
+}
+
+/* SKILL/SERVICE PAGE */
+
+.services {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.services .service .icon img {
+  max-width: 100px;
+}
+
+.services .service {
+  padding: 30px;
+  background: #f4f4f4;
+}
+
+.services .service:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.services .service h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: purple;
+}
+
+.skills-title h1 {
+  text-align: center;
+  color: purple;
+}
+
+/*   FOOTER    */
+
+.bottom-container {
+  background-color: purple;
+  padding: 10px 0 10px;
+  text-align: center;
+}
+
+.bottom-container a {
+  padding: 2px;
+  color: #9900f0;
+  font-family: "Poppins", sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  color: white;
+}
+
+/* WORK PAGE */
+
+.title h1 {
+  text-align: center;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+.portfolio .item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+}
+
+.portfolio .item img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .item .action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.portfolio .item:hover .action {
+  opacity: 1;
+}
+
+.portfolio .item .action a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 5px 10px;
+}
+
+/*CONTACT*/
+.title-contact {
+  margin-top: 100px;
+  border: 2px solid purple;
+  padding: 50px 50px;
+}
+
+.contact-email {
+  display: absolute;
+  left: 60px;
+}
+/*MEDIA QUERIES */
+
+@media (max-width: 1068px) {
+  .home-img {
+    display: none;
+  }
+  .logo {
+    font-size: 25px;
+    top: 5px;
+  }
+
+  section {
+    padding: 100px 40px;
+  }
+  .navigation ul li a {
+    font-size: 25px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
